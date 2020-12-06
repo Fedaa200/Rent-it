@@ -5,8 +5,11 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
+
 //import the routes of the app ....
 const itemRoutes = require('./routes/item')
+
+
 
 const authRoutes = require('./routes/auth')
 const testRoutes = require('./routes/test')
@@ -14,7 +17,7 @@ const testRoutes = require('./routes/test')
 const app = express();
 
 //connect to database
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
