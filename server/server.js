@@ -24,6 +24,14 @@ mongoose.connect(process.env.DATABASE, {
 .then(()=> console.log('DB connected'))
 .catch(err=> console.log(err));
 
+// mongoose.connect('mongodb://localhost/rentit', {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
+// mongoose.connection
+//     .once('open', function () {
+//       console.log('MongoDB running');
+//     })
+//     .on('error', function (err) {
+//       console.log(err);
+//     });
 
 //middleware
 app.use(cors());
